@@ -11,6 +11,11 @@
 2. user: souravaggarwal
 3. pass: 121212
 
+# Setup EC2 server
+1. Inbound and Outbound Security rules
+   1. SSH, HTTP, HTTPS with Anywhere IP4 and 6
+   2. Custom TCP 8000 with Anywhere IP4 and 6
+   
 # Connect EC2 with local terminal
 1. chmod 400 "tryon-backend-core-ec2-ssh-keypair.pem"
 2. ssh -i "tryon-backend-core-ec2-ssh-keypair.pem" ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
@@ -32,4 +37,8 @@
 
 # Git clone
 1. git clone git@github.com:SouravAggarwal/TryOn.git
-2. 
+2. cd TryOn/Backend/
+3. git checkout main && git pull origin main
+4. pip install -r tryon_backend/requirements.txt
+5. python manage.py runserver 0.0.0.0:8000
+6. 
