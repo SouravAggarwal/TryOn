@@ -1,7 +1,7 @@
 <template>
   <section class="section bg-gray-50">
     <div class="container">
-      <h2 class="heading text-center">Trusted by Leading Brands 2</h2>
+      <h2 class="heading text-center">Trusted by Leading Brands 3</h2>
       <p class="subheading text-center">
         Join the companies revolutionizing online shopping with TryOn
       </p>
