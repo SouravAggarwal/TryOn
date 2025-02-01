@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6d28d9;
+  --primary-light: #7c3aed;
+  --secondary: #4f46e5;
+}
+
+body {
+  @apply antialiased text-gray-800;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-light;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary border-2 border-primary hover:bg-gray-50;
+}
+
+.section {
+  @apply py-20 px-4 sm:px-6 lg:px-8;
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+.heading {
+  @apply text-4xl sm:text-5xl font-bold text-gray-900 mb-6;
+}
+
+.subheading {
+  @apply text-xl text-gray-600 mb-8 max-w-2xl mx-auto;
+}
