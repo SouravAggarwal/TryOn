@@ -1,5 +1,5 @@
 ---
-name: Deploy Vue.js to AWS S3 + CloudFront
+name: Deploy Frontend Vue project to AWS S3 + CloudFront
 on:
   push:
     branches:
