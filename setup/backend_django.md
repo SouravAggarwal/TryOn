@@ -17,7 +17,7 @@
    2. Custom TCP 8000 with Anywhere IP4 and 6
    
 # Connect EC2 with local terminal
-1. chmod 400 "tryon-backend-core-ec2-ssh-keypair.pem"
+1. chmod 400 "creds/tryon-backend-core-ec2-ssh-keypair.pem"
 2. ssh -i "creds/tryon-backend-core-ec2-ssh-keypair.pem" ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
    
 # Add EC2 ssh on Github
@@ -41,6 +41,23 @@
 3. git checkout main && git pull origin main
 4. pip install -r tryon_backend/requirements.txt
 5. python manage.py runserver 0.0.0.0:8000
+
+# EC2 CI/ CD
+1. Steps to Add the Public Key to EC2 (One-Time Setup)
+   1. Generate and Copy Local Machine Key (Run following commands on Macbook/ local)
+      1. ssh-keygen -t rsa -b 4096 -C "srvaggarwal96@gmail.com"
+      2. cat ~/.ssh/id_rsa.pub
+   2. Copy the above key and add it to EC2 (Run following commands on EC2 server)
+      1. ssh -i "creds/tryon-backend-core-ec2-ssh-keypair.pem" ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
+         1. mkdir -p ~/.ssh
+         2. echo "your-public-key" >> ~/.ssh/authorized_keys      ## Replace "your-public-key" with above copy rsa.pub content.
+         3. chmod 600 ~/.ssh/authorized_keys
+         4. chmod 700 ~/.ssh
+   3. Test via Local Machine (Now this will connect to EC2 without the requirment of .pem file.)
+      1. ssh -i ~/.ssh/id_rsa ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
+
+
+
 
 
 
