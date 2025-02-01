@@ -18,7 +18,7 @@
    
 # Connect EC2 with local terminal
 1. chmod 400 "tryon-backend-core-ec2-ssh-keypair.pem"
-2. ssh -i "tryon-backend-core-ec2-ssh-keypair.pem" ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
+2. ssh -i "creds/tryon-backend-core-ec2-ssh-keypair.pem" ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
    
 # Add EC2 ssh on Github
 1. ssh-keygen -t rsa -b 4096 -C "srvaggarwal96@gmail.com"
@@ -41,4 +41,8 @@
 3. git checkout main && git pull origin main
 4. pip install -r tryon_backend/requirements.txt
 5. python manage.py runserver 0.0.0.0:8000
-6. 
+
+
+
+            sudo systemctl restart gunicorn
+            sudo systemctl restart nginx
