@@ -38,7 +38,8 @@ pnpm-debug.log*
 ######################### Backend #########################
 
 venv/*
-creds/*
+Creds/*
+Sagemaker/*
 *.github_aws.txt
 *.pyc
 *db.sqlite3
