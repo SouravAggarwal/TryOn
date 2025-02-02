@@ -15,6 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Test SSH Connection (Not required)
+        run: |
+          ssh -i ~/.ssh/id_rsa -vvv -o StrictHostKeyChecking=no ec2-user@${{ secrets.HOST_DNS }} "echo 'SSH Connection Success!'"
+
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
