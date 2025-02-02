@@ -35,7 +35,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.EC2_USERNAME }}
-          TARGET: /home/ec2-user/
+          TARGET: /home/ec2-user/TryOn/
 
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
