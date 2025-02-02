@@ -128,6 +128,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ############################################ Custom settings ############################################
 CORS_ALLOW_ALL_ORIGINS = True 
 
+# Static files (CSS, JavaScript, Images)
+import os
+STATIC_URL = '/static/'  # This should already exist
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Add this line
+
 # REST_FRAMEWORK = {
 #     'DEFAULT_AUTHENTICATION_CLASSES': [
 #         'rest_framework.authentication.SessionAuthentication',

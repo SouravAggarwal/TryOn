@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             source venv/bin/activate
-            cd ${{ secrets.DJANGO_PROJECT_DIR }}
+            cd TryOn/Backend/
             git pull origin main
             pip install -r requirements.txt
             python manage.py makemigrations
