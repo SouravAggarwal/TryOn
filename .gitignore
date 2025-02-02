@@ -37,11 +37,27 @@ pnpm-debug.log*
 
 ######################### Backend #########################
 
-venv/*
+*venv/*
 Creds/*
-Sagemaker/*
+
 *.github_aws.txt
 *.pyc
 *db.sqlite3
 *.pem
 *staticfiles*
+LocalFiles/*
+
+
+######################### ImageProcessor #########################
+*.ipynb_checkpoints
+*.pyc
+*.pyo
+*SampleImages*
+*__pycache__*
+*venv*
+*staticfiles*
+*ckpt*
+*cache*
+*test_tagged.json
+*train_tagged.json
+

@@ -1,0 +1,48 @@
+IDM-VTON : Improving Diffusion Models for Authentic Virtual Try-on in the Wild
+https://github.com/yisol/IDM-VTON
+
+Step 1: Clone the repository
+git clone https://github.com/yisol/IDM-VTON
+
+Step 2: Navigate inside the cloned repository
+cd IDM-VTON
+
+Step 3: Create virtual environment
+python -m venv venv
+
+Step 4: Activate virtual environment
+venv\scripts\activate
+
+Step 5: Install requirements
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+
+pip install pytorch-triton
+
+pip install accelerate==0.25.0 torchmetrics==1.2.1 tqdm==4.66.1 transformers==4.36.2 diffusers==0.25.0 einops==0.7.0 bitsandbytes==0.39.0 scipy==1.11.1 opencv-python gradio==4.24.0 fvcore cloudpickle omegaconf pycocotools basicsr av onnxruntime==1.16.2
+
+pip install pydantic==2.8.2 pydantic-core==2.20.1 fastapi==0.112.4
+
+Step 6: Download checkpoints (manual download)
+
+1. IDM-VTON\ckpt\densepose
+	https://huggingface.co/yisol/IDM-VTON/tree/main/densepose
+
+2. IDM-VTON\ckpt\humanparsing (parsing_atr.onnx and parsing_lip.onnx)
+	https://huggingface.co/levihsu/OOTDiffusion/tree/main/checkpoints/humanparsing
+
+3. IDM-VTON\ckpt\openpose\ckpts
+	https://huggingface.co/lllyasviel/ControlNet/blob/main/annotator/ckpts/body_pose_model.pth
+
+
+Step 7: Download models
+mkdir yisol
+cd yisol
+git lfs install
+git clone https://huggingface.co/yisol/IDM-VTON
+
+Step 8: Launch the gradio UI
+venv\scripts\activate
+python gradio_demo/app.py
+
+Try Hugging face demo
+https://huggingface.co/spaces/yisol/IDM-VTON

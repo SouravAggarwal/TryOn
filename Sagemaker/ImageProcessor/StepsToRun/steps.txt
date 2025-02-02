@@ -1,0 +1,19 @@
+
+1. Initialize Git
+    - git init
+    - git lfs install
+    - git add .
+    - git reset HEAD~     -> to remove last commit  
+git commit -m "Add project code with Git LFS tracking"
+git push origin main
+
+2. Status:
+  - git lfs sm status
+ 
+
+python gradio_demo/app.py  
+
+https://huggingface.co/docs/hub/repositories-getting-started#terminal
+
+# commands to run the project
+python gradio_demo/app.py --ckpt /Volumes/Personal/Projects/ImageAI/clothing/NymboTryOn/VirtualDemoMetaFiles/ckpt --create_cache 0
