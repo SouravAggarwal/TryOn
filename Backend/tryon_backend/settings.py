@@ -130,6 +130,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # Static files (CSS, JavaScript, Images)
 import os
+
 STATIC_URL = '/static/'  # This should already exist
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Add this line
 
