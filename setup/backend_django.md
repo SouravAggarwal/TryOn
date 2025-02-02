@@ -22,7 +22,10 @@
    
 # Add EC2 ssh on Github
 1. ssh-keygen -t rsa -b 4096 -C "srvaggarwal96@gmail.com"
-2. cat ~/.ssh/id_rsa.pub
+   •	This creates:
+	   •	Private Key: ~/.ssh/id_rsa (We wil add this to Github Actions)
+	   •	Public Key: ~/.ssh/id_rsa.pub (We will add this to EC2)
+2. cat ~/.ssh/id_rsa.pub     
 3. ssh -T git@github.com     (To verify)
    
 # EC2 Setup and Python installation
@@ -55,6 +58,10 @@
          4. chmod 700 ~/.ssh
    3. Test via Local Machine (Now this will connect to EC2 without the requirment of .pem file.)
       1. ssh -i ~/.ssh/id_rsa ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
+   4. Copy local machine private key (Run the following on Macbook)
+      1. cat ~/.ssh/id_rsa                   # Example: -----BEGIN RSA PRIVATE KEY
+      2. Add it to github actions            # GitHub → Your Repo → Settings → Secrets and Variables → Actions → New Repository Secret
+      3. 
 
 
 
