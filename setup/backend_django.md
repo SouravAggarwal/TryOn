@@ -61,7 +61,8 @@
    4. Copy local machine private key (Run the following on Macbook)
       1. cat ~/.ssh/id_rsa                   # Example: -----BEGIN RSA PRIVATE KEY
       2. Add it to github actions            # GitHub → Your Repo → Settings → Secrets and Variables → Actions → New Repository Secret
-      3. 
+   5. Debug Github Actions
+      1. ssh -i ~/.ssh/id_rsa -vvv ec2-user@ec2-44-202-33-3.compute-1.amazonaws.com
 
 
 
