@@ -2,7 +2,7 @@
   <div class="pt-20">
     <section class="section">
       <div class="container">
-        <h1 class="heading text-center">Simple, Transparent Pricing</h1>
+        <h1 class="heading text-center">Simple, Non Transparent Pricing</h1>
         <p class="subheading text-center">Choose the plan that best fits your needs</p>
 
         <div class="grid md:grid-cols-3 gap-8 mt-12">
